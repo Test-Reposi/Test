@@ -147,7 +147,7 @@ jobs:
             NEW_VERSION=$(echo "$VERSION" | awk -F'.' '{print $1 "." $2 "." $3 + 1}')
 
             # Construct the new tag
-            NEW_TAG="v${NEW_VERSION}_$Branch_Name"
+            NEW_TAG="v${NEW_VERSION}"
           fi
 
           echo "Generated new tag: $NEW_TAG"
