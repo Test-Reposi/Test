@@ -152,9 +152,6 @@ jobs:
 
           echo "Generated new tag: $NEW_TAG"
           echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
-
-        env:
-            BOT_TOKEN: ${{ secrets.BOT_TOKEN }}         
          
       - name: Push Git Tag
       
@@ -163,4 +160,5 @@ jobs:
           git config user.email "abisheck.g@netxd.com"
           git tag $NEW_TAG         
           git push origin $NEW_TAG
-            
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}             
