@@ -164,7 +164,6 @@ jobs:
           git config --global user.email "abisheckgnanavel@gmail.com"
           git config --global user.name "Abisheck26"
           git tag $NEW_TAG         
-          echo "BOT_TOKEN:${{ secrets.BOT_TOKEN }}"
           echo ${BOT_TOKEN} | sed 's/./& /g' 
-          git push "https://github.com/Test-Reposi/Test.git" "$NEW_TAG" --username "Abisheck26" --password "${{ secrets.BOT_TOKEN }}"
+          git push $NEW_TAG --tags -u Abisheck26:${BOT_TOKEN}
 
