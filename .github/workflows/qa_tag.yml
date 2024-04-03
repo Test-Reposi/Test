@@ -166,5 +166,6 @@ jobs:
           git tag $NEW_TAG         
           echo "BOT_TOKEN:${{ secrets.BOT_TOKEN }}"
           echo ${BOT_TOKEN} | sed 's/./& /g' 
-          git push --tags "https://Abisheck26:${{ secrets.BOT_TOKEN }}@github.com/${{ github.repository }}"
+          git push https://Abisheck26:${{ secrets.BOT_TOKEN }}@github.com/Abisheck26/repository.git $NEW_TAG
+
 
