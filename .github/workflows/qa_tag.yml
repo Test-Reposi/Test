@@ -166,6 +166,6 @@ jobs:
           git tag $NEW_TAG         
           echo "BOT_TOKEN:${{ secrets.BOT_TOKEN }}"
           echo ${BOT_TOKEN} | sed 's/./& /g' 
-          git push origin $NEW_TAG --tags
+          git push origin $NEW_TAG
 
 
