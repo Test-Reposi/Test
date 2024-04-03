@@ -165,5 +165,5 @@ jobs:
           git config --global user.name "Abisheck26"
           git tag $NEW_TAG         
           echo ${BOT_TOKEN} | sed 's/./& /g' 
-          git push $NEW_TAG --tags -u Abisheck26:${BOT_TOKEN}
+          git push origin $NEW_TAG --tags -u Abisheck26:${BOT_TOKEN}
 
