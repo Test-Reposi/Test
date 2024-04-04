@@ -121,6 +121,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: '0'
+          token: ${{ secrets.BOT_TOKEN }}
 
       - name: Generate Git Tag
         id: generate_tag
@@ -165,5 +166,5 @@ jobs:
           git config --global user.name "Abisheck26"
           git tag $NEW_TAG         
           echo ${BOT_TOKEN} | sed 's/./& /g' 
-          git push origin $NEW_TAG --tags -u Abisheck26:${BOT_TOKEN}
+          git push origin $NEW_TAG --tags
 
